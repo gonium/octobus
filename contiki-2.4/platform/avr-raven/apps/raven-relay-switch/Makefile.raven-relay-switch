@@ -1,0 +1,4 @@
+raven-relay-switch_src = relay-switch.c
+
+
+CFLAGS+=-DRAVEN_RELAY_SWITCH=1

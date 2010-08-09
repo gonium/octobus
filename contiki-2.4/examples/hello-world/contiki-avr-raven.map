@@ -1,0 +1,712 @@
+Archive member included because of file (symbol)
+
+contiki-avr-raven.a(contiki-raven-m)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm1284p.o (main)
+contiki-avr-raven.a(clock.o)  contiki-avr-raven.a(contiki-raven-m) (clock_init)
+contiki-avr-raven.a(rs232.o)  contiki-avr-raven.a(contiki-raven-m) (rs232_init)
+contiki-avr-raven.a(process.o)
+                              contiki-avr-raven.a(contiki-raven-m) (process_init)
+contiki-avr-raven.a(procinit.o)
+                              contiki-avr-raven.a(contiki-raven-m) (procinit_init)
+contiki-avr-raven.a(autostart.o)
+                              contiki-avr-raven.a(contiki-raven-m) (autostart_start)
+contiki-avr-raven.a(etimer.o)
+                              contiki-avr-raven.a(clock.o) (etimer_pending)
+contiki-avr-raven.a(timer.o)  contiki-avr-raven.a(etimer.o) (timer_reset)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr51/libgcc.a(_exit.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm1284p.o (exit)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr51/libgcc.a(_clear_bss.o)
+                              contiki-avr-raven.a(clock.o) (__do_clear_bss)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(iob.o)
+                              contiki-avr-raven.a(rs232.o) (__iob)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(printf_p.o)
+                              contiki-avr-raven.a(contiki-raven-m) (printf_P)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(puts.o)
+                              hello-world.co (puts)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vsnprintf.o)
+                              contiki-avr-raven.a(rs232.o) (vsnprintf)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(printf_p.o) (vfprintf)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(strnlen_P.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vfprintf_std.o) (strnlen_P)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(strnlen.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vfprintf_std.o) (strnlen)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(fputc.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vfprintf_std.o) (fputc)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vfprintf_std.o) (__ultoa_invert)
+
+Allocating common symbols
+Common symbol       size              file
+
+seconds             0x4               contiki-avr-raven.a(clock.o)
+__iob               0x6               /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(iob.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm1284p.o
+Address of section .bootloader set to 0x1fc00
+LOAD hello-world.co
+LOAD contiki-avr-raven.a
+LOAD /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr51/libgcc.a
+LOAD /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a
+LOAD /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr51/libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x13d2
+ *(.vectors)
+ .vectors       0x00000000       0x8c /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm1284p.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data  0x0000008c       0x29 contiki-avr-raven.a(contiki-raven-m)
+                0x000000b6                . = ALIGN (0x2)
+ *fill*         0x000000b5        0x1 00
+                0x000000b6                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x000000b6        0x0 linker stubs
+ *(.trampolines*)
+                0x000000b6                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x000000b6                __ctors_start = .
+ *(.ctors)
+                0x000000b6                __ctors_end = .
+                0x000000b6                __dtors_start = .
+ *(.dtors)
+                0x000000b6                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x000000b6        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm1284p.o
+                0x000000b6                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x000000b6        0xc /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm1284p.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x000000c2       0x1a /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm1284p.o
+                0x000000c2                __do_copy_data
+ .init4         0x000000dc       0x10 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr51/libgcc.a(_clear_bss.o)
+                0x000000dc                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x000000ec        0x8 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm1284p.o
+ *(.init9)
+ *(.text)
+ .text          0x000000f4        0x4 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm1284p.o
+                0x000000f4                __vector_1
+                0x000000f4                __vector_32
+                0x000000f4                __vector_34
+                0x000000f4                __vector_24
+                0x000000f4                __vector_12
+                0x000000f4                __bad_interrupt
+                0x000000f4                __vector_6
+                0x000000f4                __vector_31
+                0x000000f4                __vector_3
+                0x000000f4                __vector_23
+                0x000000f4                __vector_25
+                0x000000f4                __vector_11
+                0x000000f4                __vector_13
+                0x000000f4                __vector_17
+                0x000000f4                __vector_19
+                0x000000f4                __vector_7
+                0x000000f4                __vector_27
+                0x000000f4                __vector_5
+                0x000000f4                __vector_33
+                0x000000f4                __vector_4
+                0x000000f4                __vector_9
+                0x000000f4                __vector_2
+                0x000000f4                __vector_21
+                0x000000f4                __vector_15
+                0x000000f4                __vector_29
+                0x000000f4                __vector_8
+                0x000000f4                __vector_26
+                0x000000f4                __vector_14
+                0x000000f4                __vector_10
+                0x000000f4                __vector_18
+ .text          0x000000f8       0x22 hello-world.co
+ .text          0x0000011a       0xa4 contiki-avr-raven.a(contiki-raven-m)
+                0x000001b4                main
+                0x00000154                initialize
+                0x0000011a                log_message
+ .text          0x000001be      0x18c contiki-avr-raven.a(clock.o)
+                0x000001be                clock_init
+                0x00000226                clock_wait
+                0x00000262                clock_seconds
+                0x00000210                clock_delay
+                0x00000260                clock_set_seconds
+                0x000001f6                clock_time
+                0x00000292                __vector_16
+ .text          0x0000034a      0x2da contiki-avr-raven.a(rs232.o)
+                0x0000034a                __vector_22
+                0x000003de                __vector_28
+                0x00000572                rs232_stdout_putchar
+                0x000005b8                rs232_printf
+                0x0000050e                rs232_send
+                0x000005a6                rs232_redirect_stdout
+                0x000003c6                __vector_30
+                0x00000442                rs232_init
+                0x0000047c                rs232_print_p
+                0x00000558                slip_arch_writeb
+                0x000004c4                rs232_print
+                0x0000053a                rs232_set_input
+                0x00000362                __vector_20
+ .text          0x00000624      0x366 contiki-avr-raven.a(process.o)
+                0x0000089e                process_post
+                0x0000088c                process_nevents
+                0x00000904                process_start
+                0x000008e6                process_post_synch
+                0x0000095e                process_poll
+                0x00000624                process_alloc_event
+                0x0000074e                process_exit
+                0x00000976                process_is_running
+                0x0000075c                process_init
+                0x000007ba                process_run
+ .text          0x0000098a       0x20 contiki-avr-raven.a(procinit.o)
+                0x0000098a                procinit_init
+ .text          0x000009aa       0x38 contiki-avr-raven.a(autostart.o)
+                0x000009aa                autostart_exit
+                0x000009c4                autostart_start
+ .text          0x000009e2      0x2e4 contiki-avr-raven.a(etimer.o)
+                0x00000a12                etimer_pending
+                0x00000c9a                etimer_reset
+                0x00000cb0                etimer_set
+                0x00000afc                etimer_adjust
+                0x00000c84                etimer_restart
+                0x00000a0a                etimer_start_time
+                0x00000a28                etimer_next_expiration_time
+                0x00000b10                etimer_request_poll
+                0x000009f8                etimer_expiration_time
+                0x00000aac                etimer_stop
+                0x000009e2                etimer_expired
+ .text          0x00000cc6       0x9e contiki-avr-raven.a(timer.o)
+                0x00000d04                timer_expired
+                0x00000cda                timer_remaining
+                0x00000d48                timer_set
+                0x00000d32                timer_restart
+                0x00000cc6                timer_reset
+ .text          0x00000d64        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr51/libgcc.a(_exit.o)
+ .text          0x00000d64        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr51/libgcc.a(_clear_bss.o)
+ .text          0x00000d64        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(iob.o)
+ .text          0x00000d64        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(printf_p.o)
+ .text          0x00000d64        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(puts.o)
+ .text          0x00000d64        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vsnprintf.o)
+ .text          0x00000d64        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+ .text          0x00000d64        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(strnlen_P.o)
+ .text          0x00000d64        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(strnlen.o)
+ .text          0x00000d64        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(fputc.o)
+ .text          0x00000d64        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+                0x00000d64                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x00000d64        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr51/libgcc.a(_exit.o)
+ .text.libgcc   0x00000d64        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr51/libgcc.a(_clear_bss.o)
+ .text.avr-libc
+                0x00000d64       0x46 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(printf_p.o)
+                0x00000d64                printf_P
+ .text.avr-libc
+                0x00000daa       0x6a /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(puts.o)
+                0x00000daa                puts
+ .text.avr-libc
+                0x00000e14       0x6e /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vsnprintf.o)
+                0x00000e14                vsnprintf
+ .text.avr-libc
+                0x00000e82      0x40c /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+                0x00000e82                vfprintf
+ .text.avr-libc
+                0x0000128e       0x16 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(strnlen_P.o)
+                0x0000128e                strnlen_P
+ .text.avr-libc
+                0x000012a4       0x16 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(strnlen.o)
+                0x000012a4                strnlen
+ .text.avr-libc
+                0x000012ba       0x58 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(fputc.o)
+                0x000012ba                fputc
+ .text.avr-libc
+                0x00001312       0xbc /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+                0x00001312                __ultoa_invert
+                0x000013ce                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x000013ce        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr51/libgcc.a(_exit.o)
+                0x000013ce                exit
+                0x000013ce                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x000013ce        0x4 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr51/libgcc.a(_exit.o)
+ *(.fini0)
+                0x000013d2                _etext = .
+
+.data           0x00800100       0x7e load address 0x000013d2
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800100        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm1284p.o
+ .data          0x00800100       0x2f hello-world.co
+                0x0080012b                autostart_processes
+                0x00800121                hello_world_process
+ .data          0x0080012f       0x10 contiki-avr-raven.a(contiki-raven-m)
+                0x0080013b                procinit
+ .data          0x0080013f        0x0 contiki-avr-raven.a(clock.o)
+ .data          0x0080013f       0x28 contiki-avr-raven.a(rs232.o)
+ .data          0x00800167        0x0 contiki-avr-raven.a(process.o)
+ .data          0x00800167        0x0 contiki-avr-raven.a(procinit.o)
+ .data          0x00800167        0x0 contiki-avr-raven.a(autostart.o)
+ .data          0x00800167       0x16 contiki-avr-raven.a(etimer.o)
+                0x00800173                etimer_process
+ .data          0x0080017d        0x0 contiki-avr-raven.a(timer.o)
+ .data          0x0080017d        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr51/libgcc.a(_exit.o)
+ .data          0x0080017d        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr51/libgcc.a(_clear_bss.o)
+ .data          0x0080017d        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(iob.o)
+ .data          0x0080017d        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(printf_p.o)
+ .data          0x0080017d        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(puts.o)
+ .data          0x0080017d        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vsnprintf.o)
+ .data          0x0080017d        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+ .data          0x0080017d        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(strnlen_P.o)
+ .data          0x0080017d        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(strnlen.o)
+ .data          0x0080017d        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(fputc.o)
+ .data          0x0080017d        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x0080017e                . = ALIGN (0x2)
+ *fill*         0x0080017d        0x1 00
+                0x0080017e                _edata = .
+                0x0080017e                PROVIDE (__data_end, .)
+
+.bss            0x0080017e      0x103
+                0x0080017e                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0080017e        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm1284p.o
+ .bss           0x0080017e        0x0 hello-world.co
+ .bss           0x0080017e        0x0 contiki-avr-raven.a(contiki-raven-m)
+ .bss           0x0080017e        0x4 contiki-avr-raven.a(clock.o)
+ .bss           0x00800182       0x41 contiki-avr-raven.a(rs232.o)
+ .bss           0x008001c3       0xb0 contiki-avr-raven.a(process.o)
+                0x008001c3                process_list
+                0x008001c5                process_current
+ .bss           0x00800273        0x0 contiki-avr-raven.a(procinit.o)
+ .bss           0x00800273        0x0 contiki-avr-raven.a(autostart.o)
+ .bss           0x00800273        0x4 contiki-avr-raven.a(etimer.o)
+ .bss           0x00800277        0x0 contiki-avr-raven.a(timer.o)
+ .bss           0x00800277        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr51/libgcc.a(_exit.o)
+ .bss           0x00800277        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr51/libgcc.a(_clear_bss.o)
+ .bss           0x00800277        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(iob.o)
+ .bss           0x00800277        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(printf_p.o)
+ .bss           0x00800277        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(puts.o)
+ .bss           0x00800277        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vsnprintf.o)
+ .bss           0x00800277        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+ .bss           0x00800277        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(strnlen_P.o)
+ .bss           0x00800277        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(strnlen.o)
+ .bss           0x00800277        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(fputc.o)
+ .bss           0x00800277        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x00800277        0x4 contiki-avr-raven.a(clock.o)
+                0x00800277                seconds
+ COMMON         0x0080027b        0x6 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(iob.o)
+                0x0080027b                __iob
+                0x00800281                PROVIDE (__bss_end, .)
+                0x000013d2                __data_load_start = LOADADDR (.data)
+                0x00001450                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800281        0x0
+                0x00800281                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800281                PROVIDE (__noinit_end, .)
+                0x00800281                _end = .
+                0x00800281                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x8
+ *(.eeprom*)
+ .eeprom        0x00810000        0x8 contiki-avr-raven.a(contiki-raven-m)
+                0x00810000                mac_address
+                0x00810008                __eeprom_end = .
+
+.fuse           0x00820000        0x3
+ *(.fuse)
+ .fuse          0x00820000        0x3 contiki-avr-raven.a(contiki-raven-m)
+                0x00820000                __fuse
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature      0x00840000        0x3
+ *(.signature*)
+ .signature     0x00840000        0x3 contiki-avr-raven.a(contiki-raven-m)
+                0x00840000                __signature
+
+.stab           0x00000000      0xd08
+ *(.stab)
+ .stab          0x00000000      0x750 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm1284p.o
+ .stab          0x00000750       0x9c /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(strnlen_P.o)
+                                 0xa8 (size before relaxing)
+ .stab          0x000007ec       0x9c /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(strnlen.o)
+                                 0xa8 (size before relaxing)
+ .stab          0x00000888      0x480 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+                                0x48c (size before relaxing)
+
+.stabstr        0x00000000      0x1a1
+ *(.stabstr)
+ .stabstr       0x00000000      0x1a1 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm1284p.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x1c0
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 hello-world.co
+ .debug_aranges
+                0x00000020       0x20 contiki-avr-raven.a(contiki-raven-m)
+ .debug_aranges
+                0x00000040       0x20 contiki-avr-raven.a(clock.o)
+ .debug_aranges
+                0x00000060       0x20 contiki-avr-raven.a(rs232.o)
+ .debug_aranges
+                0x00000080       0x20 contiki-avr-raven.a(process.o)
+ .debug_aranges
+                0x000000a0       0x20 contiki-avr-raven.a(procinit.o)
+ .debug_aranges
+                0x000000c0       0x20 contiki-avr-raven.a(autostart.o)
+ .debug_aranges
+                0x000000e0       0x20 contiki-avr-raven.a(etimer.o)
+ .debug_aranges
+                0x00000100       0x20 contiki-avr-raven.a(timer.o)
+ .debug_aranges
+                0x00000120       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(printf_p.o)
+ .debug_aranges
+                0x00000140       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(puts.o)
+ .debug_aranges
+                0x00000160       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vsnprintf.o)
+ .debug_aranges
+                0x00000180       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+ .debug_aranges
+                0x000001a0       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(fputc.o)
+
+.debug_pubnames
+                0x00000000      0x5bc
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x42 hello-world.co
+ .debug_pubnames
+                0x00000042       0x72 contiki-avr-raven.a(contiki-raven-m)
+ .debug_pubnames
+                0x000000b4       0x93 contiki-avr-raven.a(clock.o)
+ .debug_pubnames
+                0x00000147       0xff contiki-avr-raven.a(rs232.o)
+ .debug_pubnames
+                0x00000246       0xf7 contiki-avr-raven.a(process.o)
+ .debug_pubnames
+                0x0000033d       0x24 contiki-avr-raven.a(procinit.o)
+ .debug_pubnames
+                0x00000361       0x39 contiki-avr-raven.a(autostart.o)
+ .debug_pubnames
+                0x0000039a      0x109 contiki-avr-raven.a(etimer.o)
+ .debug_pubnames
+                0x000004a3       0x68 contiki-avr-raven.a(timer.o)
+ .debug_pubnames
+                0x0000050b       0x1c /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(iob.o)
+ .debug_pubnames
+                0x00000527       0x1f /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(printf_p.o)
+ .debug_pubnames
+                0x00000546       0x1b /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(puts.o)
+ .debug_pubnames
+                0x00000561       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vsnprintf.o)
+ .debug_pubnames
+                0x00000581       0x1f /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+ .debug_pubnames
+                0x000005a0       0x1c /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(fputc.o)
+
+.debug_info     0x00000000     0x275a
+ *(.debug_info)
+ .debug_info    0x00000000      0x1df hello-world.co
+ .debug_info    0x000001df      0x35f contiki-avr-raven.a(contiki-raven-m)
+ .debug_info    0x0000053e      0x23a contiki-avr-raven.a(clock.o)
+ .debug_info    0x00000778      0x5f7 contiki-avr-raven.a(rs232.o)
+ .debug_info    0x00000d6f      0x51b contiki-avr-raven.a(process.o)
+ .debug_info    0x0000128a      0x18f contiki-avr-raven.a(procinit.o)
+ .debug_info    0x00001419      0x1af contiki-avr-raven.a(autostart.o)
+ .debug_info    0x000015c8      0x4ed contiki-avr-raven.a(etimer.o)
+ .debug_info    0x00001ab5      0x170 contiki-avr-raven.a(timer.o)
+ .debug_info    0x00001c25      0x156 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(iob.o)
+ .debug_info    0x00001d7b      0x1b4 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(printf_p.o)
+ .debug_info    0x00001f2f      0x1a0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(puts.o)
+ .debug_info    0x000020cf      0x1d7 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vsnprintf.o)
+ .debug_info    0x000022a6      0x34a /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+ .debug_info    0x000025f0      0x16a /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(fputc.o)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000     0x13f4
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x122 hello-world.co
+ .debug_abbrev  0x00000122      0x184 contiki-avr-raven.a(contiki-raven-m)
+ .debug_abbrev  0x000002a6      0x152 contiki-avr-raven.a(clock.o)
+ .debug_abbrev  0x000003f8      0x258 contiki-avr-raven.a(rs232.o)
+ .debug_abbrev  0x00000650      0x2b6 contiki-avr-raven.a(process.o)
+ .debug_abbrev  0x00000906       0xf7 contiki-avr-raven.a(procinit.o)
+ .debug_abbrev  0x000009fd       0xf3 contiki-avr-raven.a(autostart.o)
+ .debug_abbrev  0x00000af0      0x215 contiki-avr-raven.a(etimer.o)
+ .debug_abbrev  0x00000d05       0xc1 contiki-avr-raven.a(timer.o)
+ .debug_abbrev  0x00000dc6       0xd0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(iob.o)
+ .debug_abbrev  0x00000e96      0x10f /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(printf_p.o)
+ .debug_abbrev  0x00000fa5      0x103 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(puts.o)
+ .debug_abbrev  0x000010a8       0xed /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vsnprintf.o)
+ .debug_abbrev  0x00001195      0x184 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+ .debug_abbrev  0x00001319       0xdb /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(fputc.o)
+
+.debug_line     0x00000000     0x1aac
+ *(.debug_line)
+ .debug_line    0x00000000       0xaa hello-world.co
+ .debug_line    0x000000aa      0x1fb contiki-avr-raven.a(contiki-raven-m)
+ .debug_line    0x000002a5      0x1b3 contiki-avr-raven.a(clock.o)
+ .debug_line    0x00000458      0x39c contiki-avr-raven.a(rs232.o)
+ .debug_line    0x000007f4      0x3b1 contiki-avr-raven.a(process.o)
+ .debug_line    0x00000ba5       0xa7 contiki-avr-raven.a(procinit.o)
+ .debug_line    0x00000c4c       0xd2 contiki-avr-raven.a(autostart.o)
+ .debug_line    0x00000d1e      0x383 contiki-avr-raven.a(etimer.o)
+ .debug_line    0x000010a1      0x114 contiki-avr-raven.a(timer.o)
+ .debug_line    0x000011b5       0x83 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(iob.o)
+ .debug_line    0x00001238      0x118 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(printf_p.o)
+ .debug_line    0x00001350       0xbe /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(puts.o)
+ .debug_line    0x0000140e      0x145 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vsnprintf.o)
+ .debug_line    0x00001553      0x482 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+ .debug_line    0x000019d5       0xd7 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(fputc.o)
+
+.debug_frame    0x00000000      0x4e0
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x20 hello-world.co
+ .debug_frame   0x00000020       0x40 contiki-avr-raven.a(contiki-raven-m)
+ .debug_frame   0x00000060       0x80 contiki-avr-raven.a(clock.o)
+ .debug_frame   0x000000e0       0xe0 contiki-avr-raven.a(rs232.o)
+ .debug_frame   0x000001c0       0xe0 contiki-avr-raven.a(process.o)
+ .debug_frame   0x000002a0       0x20 contiki-avr-raven.a(procinit.o)
+ .debug_frame   0x000002c0       0x30 contiki-avr-raven.a(autostart.o)
+ .debug_frame   0x000002f0       0xf0 contiki-avr-raven.a(etimer.o)
+ .debug_frame   0x000003e0       0x60 contiki-avr-raven.a(timer.o)
+ .debug_frame   0x00000440       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(printf_p.o)
+ .debug_frame   0x00000460       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(puts.o)
+ .debug_frame   0x00000480       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vsnprintf.o)
+ .debug_frame   0x000004a0       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+ .debug_frame   0x000004c0       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(fputc.o)
+
+.debug_str      0x00000000      0x8ac
+ *(.debug_str)
+ .debug_str     0x00000000      0x129 hello-world.co
+                                0x183 (size before relaxing)
+ .debug_str     0x00000129       0xa7 contiki-avr-raven.a(contiki-raven-m)
+                                0x1d6 (size before relaxing)
+ .debug_str     0x000001d0       0x87 contiki-avr-raven.a(clock.o)
+                                0x15a (size before relaxing)
+ .debug_str     0x00000257      0x1a9 contiki-avr-raven.a(rs232.o)
+                                0x27d (size before relaxing)
+ .debug_str     0x00000400      0x166 contiki-avr-raven.a(process.o)
+                                0x286 (size before relaxing)
+ .debug_str     0x00000566       0x28 contiki-avr-raven.a(procinit.o)
+                                0x13d (size before relaxing)
+ .debug_str     0x0000058e       0x3a contiki-avr-raven.a(autostart.o)
+                                0x150 (size before relaxing)
+ .debug_str     0x000005c8      0x143 contiki-avr-raven.a(etimer.o)
+                                0x2a5 (size before relaxing)
+ .debug_str     0x0000070b       0x27 contiki-avr-raven.a(timer.o)
+                                0x135 (size before relaxing)
+ .debug_str     0x00000732       0x7d /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(iob.o)
+                                0x121 (size before relaxing)
+ .debug_str     0x000007af       0x28 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(printf_p.o)
+                                0x158 (size before relaxing)
+ .debug_str     0x000007d7       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(puts.o)
+                                0x127 (size before relaxing)
+ .debug_str     0x000007f7       0x31 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vsnprintf.o)
+                                0x15b (size before relaxing)
+ .debug_str     0x00000828       0x62 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+                                0x19a (size before relaxing)
+ .debug_str     0x0000088a       0x22 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(fputc.o)
+                                0x12a (size before relaxing)
+
+.debug_loc      0x00000000     0x1007
+ *(.debug_loc)
+ .debug_loc     0x00000000       0x6e hello-world.co
+ .debug_loc     0x0000006e       0x30 contiki-avr-raven.a(contiki-raven-m)
+ .debug_loc     0x0000009e       0x5e contiki-avr-raven.a(clock.o)
+ .debug_loc     0x000000fc      0x1a2 contiki-avr-raven.a(rs232.o)
+ .debug_loc     0x0000029e      0x2f4 contiki-avr-raven.a(process.o)
+ .debug_loc     0x00000592       0x30 contiki-avr-raven.a(autostart.o)
+ .debug_loc     0x000005c2      0x3ce contiki-avr-raven.a(etimer.o)
+ .debug_loc     0x00000990       0xd0 contiki-avr-raven.a(timer.o)
+ .debug_loc     0x00000a60       0x5e /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(puts.o)
+ .debug_loc     0x00000abe       0x70 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vsnprintf.o)
+ .debug_loc     0x00000b2e      0x479 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+ .debug_loc     0x00000fa7       0x60 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(fputc.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(hello-world.avr-raven elf32-avr)
+LOAD linker stubs
+
+.bootloader     0x0001fc00        0x0
+
+.debug_ranges   0x00000000       0x90
+ .debug_ranges  0x00000000       0x18 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(printf_p.o)
+ .debug_ranges  0x00000018       0x18 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(puts.o)
+ .debug_ranges  0x00000030       0x18 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vsnprintf.o)
+ .debug_ranges  0x00000048       0x30 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+ .debug_ranges  0x00000078       0x18 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/libc.a(fputc.o)
