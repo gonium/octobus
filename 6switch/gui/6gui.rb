@@ -8,18 +8,17 @@ debug("Using $base_cmd #{$base_cmd}")
 Shoes.app (:width => 480, :height => 300) do
   debug("Starting 6gui.");
   background("raven-adapter.jpg");
-  stack (:margin => 12){
+  stack (:margin => 4){
     #title "IPv6 Switch Control", :stroke => '#B22222'
-    @log = para "Using [#{$relay_ipv6}], no action yet.", :stroke => '#666666', :align => 'right'
+    @log = para "Using [#{$relay_ipv6}], no action yet.", :stroke => 'black', :align => 'right'
   }
-  stack(:height => 60) {
-  }
-  stack (:margin => 8){
+  stack (:margin => 2){
     @on = button "  on  "
     @off = button " off  "
     @status = button "status"
   }
-
+  stack(:height => 60) {
+  }
   @on.click {
     cmd="#{$base_cmd} on"
     debug("Executing #{cmd}");
