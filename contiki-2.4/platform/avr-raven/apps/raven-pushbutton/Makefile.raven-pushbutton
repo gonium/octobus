@@ -1,0 +1,4 @@
+raven-pushbutton_src = pushbutton.c
+
+
+CFLAGS+=-DRAVEN_PUSHBUTTON=1
