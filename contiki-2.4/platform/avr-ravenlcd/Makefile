@@ -38,7 +38,7 @@ HEX_EEPROM_FLAGS += --change-section-lma .eeprom=0
 INCLUDES =
 
 ## Objects that must be built in order to link
-SRC = adc.c  key.c  lcd.c  raven3290.c  uart.c menu.c sleep.c beep.c temp.c timer.c relay.c
+SRC = adc.c  key.c  lcd.c  raven3290.c  uart.c menu.c sleep.c beep.c temp.c timer.c relay.c pushbutton.c
 
 OBJECTS = $(SRC:.c=.o)
 

@@ -71,5 +71,8 @@
 #define RELAY_OFF					  (0xD1)
 #define RELAY_TOGGLE				  (0xD2)
 
+// MD: Commands for the pushbutton
+#define SEND_PUSHBUTTON (0xE0)
+
 
 #endif /* __MAIN_H__ */

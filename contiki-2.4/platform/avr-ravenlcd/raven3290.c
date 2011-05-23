@@ -309,7 +309,9 @@ main(void)
 
     timer_init();
 
+    // MD: Custom functions.
     relay_init();
+    pushbutton_init();
 
     sei();
 
@@ -327,9 +329,12 @@ main(void)
         /* Make sure interrupts are always on */
         sei();
 
+        /* Did someone press the button? */
+
         /* The one second timer has fired. */
         if(timer_flag){
             timer_flag = false;
+        pushbutton_loop();
             //led_on();
             //relay_toggle();
             /* Check if main menu needs toggled. */

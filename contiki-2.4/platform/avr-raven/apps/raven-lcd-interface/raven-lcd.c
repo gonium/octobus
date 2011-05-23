@@ -93,6 +93,9 @@ static struct{
 #define CMD_PING 0x81
 #define CMD_ADC2 0x82
 
+// MD: Pushbutton pressed
+#define CMD_BUTTON_PRESSED 0xE0
+
 #define SOF_CHAR 1
 #define EOF_CHAR 4
 
@@ -200,7 +203,12 @@ raven_gui_loop(process_event_t ev, process_data_t data)
                 /* Set ext voltage string in web server */
                 web_set_voltage((char *)cmd.frame);
                 break;
+            case CMD_BUTTON_PRESSED:
+                // Signal: the button was pressed, do magic.
+                printf("OMG button pressed!");
+                break;
             default:
+                printf("Unknown serial command received. Ignoring.\r\n");
                 break;
             }
             /* Reset command done flag. */
