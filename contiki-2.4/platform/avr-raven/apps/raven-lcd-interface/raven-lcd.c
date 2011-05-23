@@ -66,6 +66,7 @@
 #include "mac.h"
 
 #include "raven-lcd.h"
+#include "raven-pushbutton.h"
 
 #include <string.h>
 #include <stdio.h>
@@ -93,7 +94,7 @@ static struct{
 #define CMD_PING 0x81
 #define CMD_ADC2 0x82
 
-// MD: Pushbutton pressed
+// MD: Pushbutton pressed - the m3290p sends a message over the serial line
 #define CMD_BUTTON_PRESSED 0xE0
 
 #define SOF_CHAR 1
@@ -205,7 +206,10 @@ raven_gui_loop(process_event_t ev, process_data_t data)
                 break;
             case CMD_BUTTON_PRESSED:
                 // Signal: the button was pressed, do magic.
-                printf("OMG button pressed!");
+                printf("OMG button pressed!\r\n");
+                // post an event to the print process
+                process_post(&raven_pushbutton_process, event_pushbutton_pressed, 0);
+                
                 break;
             default:
                 printf("Unknown serial command received. Ignoring.\r\n");

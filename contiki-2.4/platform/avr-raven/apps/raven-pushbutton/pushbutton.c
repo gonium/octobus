@@ -101,9 +101,9 @@ static void print_local_addresses(void) {
 
 static void udphandler(process_event_t ev, process_data_t data)
 {
-  PRINTF("----Pushbutton: Entering UDP handler.\r\n");
+  PRINTF("----Pushbutton: commencing pushbutton alert actions.\r\n");
   uip_udp_packet_send(udpconn, "heartbeart!", strlen("heartbeart!"));
-  etimer_set(&udp_periodic_timer, 3*CLOCK_SECOND);
+  //etimer_set(&udp_periodic_timer, 3*CLOCK_SECOND);
 }
 
 /*---------------------------------------------------------------------------*/
@@ -139,7 +139,7 @@ PROCESS_THREAD(raven_pushbutton_process, ev, data) {
   PRINTF("\r\nlocal/remote port %u/%u\r\n", HTONS(udpconn->lport),HTONS(udpconn->rport));
 
   print_local_addresses();
-  etimer_set(&udp_periodic_timer, 3*CLOCK_SECOND);
+  //etimer_set(&udp_periodic_timer, 3*CLOCK_SECOND);
 
   while(1){
     PRINTF("--- Relay: Waiting for events.\r\n");
