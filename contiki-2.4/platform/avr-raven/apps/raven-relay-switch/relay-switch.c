@@ -55,18 +55,8 @@
 
 static struct uip_udp_conn *udpconn;
 static struct etimer udp_periodic_timer;
-
-/* Command definitions. */
-#define ON		  0x10
-#define OFF		  0x11
-#define STATUS	0x12
-#define TOGGLE  0x13
-
 static uint8_t RELAY_STATE = ON;
 
-struct switchmsg_t {
-  uint16_t command;
-};
 
 PROCESS(raven_relay_process, "Raven Relay Process");
 AUTOSTART_PROCESSES(&raven_relay_process);

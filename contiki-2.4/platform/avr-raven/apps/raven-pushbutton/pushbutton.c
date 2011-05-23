@@ -31,6 +31,7 @@
 */
 
 #include "raven-pushbutton.h"
+#include "raven-relay.h"
 #include <string.h>
 #include "contiki.h"
 #include "contiki-lib.h"
@@ -55,17 +56,6 @@
 
 static struct uip_udp_conn *udpconn;
 static struct etimer udp_periodic_timer;
-
-/* Command definitions. */
-#define PRESSED		0x20
-#define RELEASED	0x21
-#define STATUS	0x22
-
-struct switchmsg_t {
-  uint16_t command;
-};
-
-
 
 PROCESS(raven_pushbutton_process, "Pushbutton Process");
 AUTOSTART_PROCESSES(&raven_pushbutton_process);
@@ -101,8 +91,10 @@ static void print_local_addresses(void) {
 
 static void udphandler(process_event_t ev, process_data_t data)
 {
+  struct switchmsg_t msg;
   PRINTF("----Pushbutton: commencing pushbutton alert actions.\r\n");
-  uip_udp_packet_send(udpconn, "heartbeart!", strlen("heartbeart!"));
+  msg.command=HTONS(TOGGLE);
+  uip_udp_packet_send(udpconn, &msg, sizeof(msg));
   //etimer_set(&udp_periodic_timer, 3*CLOCK_SECOND);
 }
 
@@ -124,11 +116,11 @@ PROCESS_THREAD(raven_pushbutton_process, ev, data) {
   // TODO: Make this dynamic
 
   //MDs MacOS machine
-  uip_ip6addr(&ipaddr,0xbbbb,0,0,0,0xd69a,0x20ff,0xfe07,0x7664);
-  //uip_ip6addr(&ipaddr,0xaaaa,0,0,0,0x00b5,0x5aff,0xfe0b,0x0110);
+  //uip_ip6addr(&ipaddr,0xbbbb,0,0,0,0xd69a,0x20ff,0xfe07,0x7664);
+  // Raven1
+  uip_ip6addr(&ipaddr,0xaaaa,0,0,0,0x00b5,0x5aff,0xfe0b,0x0110);
 
-
-  udpconn = udp_new(&ipaddr, HTONS(3000), NULL);
+  udpconn = udp_new(&ipaddr, HTONS(61616), NULL);
 
   //udpconn = udp_new(&ipaddr, HTONS(0xF0B0+1), NULL);
   udp_bind(udpconn, HTONS(0xF0B0));
