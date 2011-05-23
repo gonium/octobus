@@ -76,6 +76,7 @@ extern int rf230_interrupt_flag;
 #include "dev/slip.h"
 
 #include "raven-relay.h"
+#include "raven-pushbutton.h"
 
 #ifdef RAVEN_LCD_INTERFACE
 #include "raven-lcd.h"
@@ -123,9 +124,9 @@ uint8_t mac_address[8] EEMEM = {0x02, 0x11, 0x22, 0xff, 0xfe, 0x33, 0x44, 0x55};
 /*-----------------------Initial contiki processes--------------------------*/
 #ifdef RAVEN_LCD_INTERFACE
 #ifdef RF230BB
-PROCINIT(&etimer_process, &tcpip_process, &raven_lcd_process, &raven_relay_process);
+PROCINIT(&etimer_process, &tcpip_process, &raven_lcd_process, &raven_pushbutton_process, &raven_relay_process);
 #else
-PROCINIT(&etimer_process, &mac_process, &tcpip_process, &raven_lcd_process, &raven_relay_process);
+PROCINIT(&etimer_process, &mac_process, &tcpip_process, &raven_lcd_process, &raven_pushbutton_process,  &raven_relay_process);
 #endif /*RF230BB*/
 #else
 #ifdef RF230BB

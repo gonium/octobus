@@ -60,6 +60,9 @@ static struct etimer udp_periodic_timer;
 #define ON		  0x10
 #define OFF		  0x11
 #define STATUS	0x12
+#define TOGGLE  0x13
+
+static uint8_t RELAY_STATE = ON;
 
 struct switchmsg_t {
   uint16_t command;
@@ -105,10 +108,23 @@ udphandler(process_event_t ev, process_data_t data)
           case ON:
             PRINTF("----Relay: Switching ON.\r\n");
             send_relay_on();
+            RELAY_STATE = ON;
             break;
           case OFF:
             PRINTF("----Relay: Switching OFF.\r\n");
             send_relay_off();
+            RELAY_STATE = OFF;
+            break;
+          case TOGGLE:
+            if (RELAY_STATE == ON) {
+              PRINTF("----Relay: Toggling to OFF.\r\n");
+              send_relay_off();
+              RELAY_STATE = OFF;
+            } else {
+              PRINTF("----Relay: Toggling to ON.\r\n");
+              send_relay_on();
+              RELAY_STATE = ON;
+            }
             break;
           case STATUS:
             PRINTF("----Relay: Sending status.\r\n");

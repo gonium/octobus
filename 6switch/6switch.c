@@ -15,13 +15,15 @@
 #define ON		0x10
 #define OFF		0x11
 #define STATUS	0x12
+#define TOGGLE	0x13
+
 
 struct switchmsg_t {
   uint16_t command;
 };
 
 void usage() {
-  fprintf(stderr, "USAGE: 6switch hostname {on|off|status}\r\n");
+  fprintf(stderr, "USAGE: 6switch hostname {on|off|toggle|status}\r\n");
   exit(1);
 }
 
@@ -35,23 +37,26 @@ int main (int argc, char const* argv[]) {
   int numbytes;
 
   if (argc != 3) {
-	usage();
+    usage();
   }
 
 
   memset(&switchmsg, 0, sizeof(switchmsg));
   // determine what to do
   if (strcmp(argv[2], "on") == 0) {
-	printf("sending ON command\r\n");
-	switchmsg.command=htons(ON);
+    printf("sending ON command\r\n");
+    switchmsg.command=htons(ON);
   } else if (strcmp(argv[2], "off") == 0) {
-	printf("sending OFF command\r\n");
-	switchmsg.command=htons(OFF);
+    printf("sending OFF command\r\n");
+    switchmsg.command=htons(OFF);
+  } else if (strcmp(argv[2], "toggle") == 0) {
+    printf("sending TOGGLE command\r\n");
+    switchmsg.command=htons(TOGGLE);
   } else if (strcmp(argv[2], "status") == 0) {
-	fprintf(stderr, "not implemented yet.\r\n");
-	exit(2);
+    fprintf(stderr, "not implemented yet.\r\n");
+    exit(2);
   } else {
-	usage();
+    usage();
   }
 
 
@@ -61,34 +66,34 @@ int main (int argc, char const* argv[]) {
   hints.ai_socktype=SOCK_DGRAM;
 
   if ((rv = getaddrinfo(argv[1], SERVERPORT, &hints, &servinfo)) != 0) {
-	fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(rv));
-	return 1;
+    fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(rv));
+    return 1;
   }
 
   // loop results & make socket
   for (p=servinfo; p != NULL; p = p->ai_next) {
-	if ((sockfd = socket(
-			p->ai_family,
-			p->ai_socktype,
-			p->ai_protocol)) == -1) {
-	  perror("6switch: socket");
-	  continue;
-	}
-	break;
+    if ((sockfd = socket(
+            p->ai_family,
+            p->ai_socktype,
+            p->ai_protocol)) == -1) {
+      perror("6switch: socket");
+      continue;
+    }
+    break;
   }
 
   if (p == NULL) {
-	fprintf(stderr, "6switch: failed to bind to socket.\r\n");
-	return 2;
+    fprintf(stderr, "6switch: failed to bind to socket.\r\n");
+    return 2;
   }
 
 
 
   if ((numbytes = sendto(sockfd, &switchmsg,
-		  sizeof(switchmsg),
-		  0, p->ai_addr, p->ai_addrlen)) == -1){
-	perror("6switch: sendto");
-	exit(1);
+          sizeof(switchmsg),
+          0, p->ai_addr, p->ai_addrlen)) == -1){
+    perror("6switch: sendto");
+    exit(1);
   }
 
   freeaddrinfo(servinfo);
