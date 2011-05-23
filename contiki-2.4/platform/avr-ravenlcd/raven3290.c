@@ -330,11 +330,11 @@ main(void)
         sei();
 
         /* Did someone press the button? */
+        pushbutton_loop();
 
         /* The one second timer has fired. */
         if(timer_flag){
             timer_flag = false;
-        pushbutton_loop();
             //led_on();
             //relay_toggle();
             /* Check if main menu needs toggled. */

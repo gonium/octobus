@@ -3,7 +3,7 @@
 
 #include <avr/io.h>
 
-#define PUSHBUTTON_PORT PORTE
+#define PUSHBUTTON_PORT PINE
 #define PUSHBUTTON_DDR DDRE
 #define PUSHBUTTON_PIN PE3
 
